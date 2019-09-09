@@ -1,1 +1,4 @@
-contact.php
+<?php
+?>
+
+<p>contact</p>

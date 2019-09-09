@@ -1,6 +1,8 @@
 RewriteEngine On    # Turn on the rewriting engine
 RewriteRule    ^home/?$    ?p=home    [NC,L]
+RewriteRule    ^forum/?$    ?p=forum    [NC,L]
 RewriteRule    ^about/?$    ?p=about    [NC,L]
+RewriteRule    ^contact/?$    ?p=contact    [NC,L]
 RewriteRule    ^404/?$    ?p=404    [NC,L]
 
 ErrorDocument 404 http://localhost/3/forum-cms/404

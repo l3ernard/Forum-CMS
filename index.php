@@ -14,42 +14,41 @@
 
 <body>
 	<div id="wrap">
-		<div id="header">
-			<div id="logo">
-				<h1>Forum - CMS</h1>
-				<sub>wtf</sub>
-			</div>
+        <div id="grid-container">
+            <header>
+                <div id="logo">
+                    <h1>Forum - CMS</h1>
+                    <sub>wtf</sub>
+                </div>
 
 
-			<div id="menu">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Forum</a></li>
-					<li><a href="#">Login</a></li>
-				</ul>
-			</div>
-		</div>
-		<div id="main">
-			<div id="content">
+                <div id="menu">
+                    <ul>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="forum">Forum</a></li>
+                        <li><a href="login">Login</a></li>
+                    </ul>
+                </div>
+            </header>
+            <main>
 
-			<?php
-			if(!isset($_GET['p'])){
-				include('pages/home.php');
-			} else {
-				if(!file_exists("pages/" . $_GET['p'] . ".php")){
-					header("Location: home");
-				} else {
-					include("pages/" . $_GET['p'] . ".php");
-				}
+                <?php
+                if(!isset($_GET['p'])){
+                    include('pages/home.php');
+                } else {
+                    if(!file_exists("pages/" . $_GET['p'] . ".php")){
+                        header("Location: home");
+                    } else {
+                        include("pages/" . $_GET['p'] . ".php");
+                    }
 
-			}
-			?>
-			
-			</div>
-		</div>
-		<div id="footer">
-			Bernard Stornebrink 2019
+                }
+                ?>
+            </main>
+            <footer>
+                Bernard Stornebrink 2019
+            </footer>
 		</div>
 
 	</div>
