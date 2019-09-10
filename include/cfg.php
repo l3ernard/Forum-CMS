@@ -1,0 +1,3 @@
+<?php
+$root = "http://localhost/3/forum-cms/";
+

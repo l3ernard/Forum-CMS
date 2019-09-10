@@ -1,4 +1,5 @@
 <?php
+include 'include/cfg.php';
 include 'include/DBConn.inc.php';
 include 'include/user.inc.php';
 include 'include/viewuser.inc.php';
@@ -20,7 +21,7 @@ include 'include/viewuser.inc.php';
             <header>
                 <div id="logo">
                     <h1>Forum - CMS</h1>
-                    <sub>wtf</sub>
+                    <sub>wtf sick subtitle</sub>
                 </div>
 
 

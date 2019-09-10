@@ -20,11 +20,12 @@
   <component name="ProjectId" id="1QbDn9Dni3F8djPfBUO5s8UikBR" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\3\Forum-CMS\include" />
       <recent name="C:\xampp\htdocs\3\Forum-CMS\css" />
       <recent name="C:\xampp\htdocs\3\Forum-CMS\pages" />
     </key>
@@ -52,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568030566946</updated>
       <workItem from="1568030568541" duration="4787000" />
-      <workItem from="1568108745484" duration="8584000" />
+      <workItem from="1568108745484" duration="10779000" />
     </task>
     <servers />
   </component>
