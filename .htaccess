@@ -5,5 +5,9 @@ RewriteRule    ^about/?$    ?p=about    [NC,L]
 RewriteRule    ^contact/?$    ?p=contact    [NC,L]
 RewriteRule    ^404/?$    ?p=404    [NC,L]
 
+# ADMIN PANEL LINKS
+RewriteRule    ^admin/?$    ?p=admin    [NC,L]
+RewriteRule    ^admin/adduser?$    ?p=admin&a=adduser    [NC,L]
+
 ErrorDocument 404 http://localhost/3/forum-cms/404
 ErrorDocument 500 http://localhost/3/forum-cms/500

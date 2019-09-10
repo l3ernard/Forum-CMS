@@ -82,3 +82,59 @@ footer{
 
 }
 
+
+
+#admin-panel h1{
+    font-size: 16pt;
+
+}
+
+#admin-panel{
+    background-color: #e9e6e6;
+    padding:1rem;
+}
+
+#admin-panel tr td{
+    padding:0.2rem;
+
+}
+
+#admin-menu ul li{
+    list-style:none;
+    display:inline;
+
+}
+
+
+#admin-menu ul li a{
+    color:black;
+    text-decoration:none;
+
+}
+
+.inputfields{
+    height:30px;
+    width:300px;
+    padding:3px;
+    border-radius:2px;
+    border:none;
+    max-width:100%;
+    min-width:300px;
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+}
+
+.formButton{
+    padding:6px;
+    border-radius:2px;
+    border:none;
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+    background-color:#fff;
+    width:60px;
+    font-weight:bold;
+    height:30px;
+}
+
+.formButton:hover{
+    text-shadow:0px 0px 3px rgba(0,0,0,0.1);
+    cursor:pointer;
+}

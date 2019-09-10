@@ -1,5 +1,7 @@
 <?php
-
+include 'include/DBConn.inc.php';
+include 'include/user.inc.php';
+include 'include/viewuser.inc.php';
 
 ?>
 <html>
@@ -9,7 +11,7 @@
 	<meta name="description" content="Dingen">
  	<meta name="author" content="Bernard">
 
-  	<link rel="stylesheet" href="css/style.css?v=1.0">
+  	<link rel="stylesheet" href="http://localhost/3/forum-cms/css/style.css?v=1.0">
 </head>
 
 <body>
@@ -34,9 +36,12 @@
             <main>
 
                 <?php
+
+
                 if(!isset($_GET['p'])){
                     include('pages/home.php');
                 } else {
+
                     if(!file_exists("pages/" . $_GET['p'] . ".php")){
                         header("Location: home");
                     } else {
