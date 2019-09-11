@@ -35,7 +35,7 @@ class UserManager extends DBConn{
     }
 
 
-    public function user_login($login_user, $login_pass)
+    public function user_login($login_user, $login_pass)  // login user with username and password (add email soon)
     {
         $clean_user = filter_var($login_user, FILTER_SANITIZE_STRING);
         $clean_pass = filter_var($login_pass, FILTER_SANITIZE_STRING);
@@ -57,13 +57,13 @@ class UserManager extends DBConn{
 
     }
 
-    public function user_info(){
+    public function user_info(){  // retrieve logged in user information(name, mail, level) with this function
         $_username = '';
         $_email = '';
         $_level = '';
 
         if($_SESSION['login']){
-            $id = $_SESSION['id'];
+            $id = filter_var($_SESSION['id'], FILTER_SANITIZE_NUMBER_INT);
             $query = "SELECT * FROM users WHERE id='$id'";
             $info_result = $this->connect()->query($query);
             $user_info = $info_result->fetch_array();

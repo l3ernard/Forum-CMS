@@ -1,8 +1,9 @@
 <?php
-include 'include/cfg.php';
+include 'include/cfg.inc.php';
 include 'include/DBConn.inc.php';
-include 'include/user.inc.php';
-include 'include/viewuser.inc.php';
+
+
+
 
 ?>
 <html>
