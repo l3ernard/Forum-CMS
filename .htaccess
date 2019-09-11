@@ -1,5 +1,7 @@
 RewriteEngine On    # Turn on the rewriting engine
 RewriteRule    ^home/?$    ?p=home    [NC,L]
+RewriteRule    ^login/?$    ?p=login    [NC,L]
+RewriteRule    ^logout/?$    ?p=logout    [NC,L]
 RewriteRule    ^forum/?$    ?p=forum    [NC,L]
 RewriteRule    ^about/?$    ?p=about    [NC,L]
 RewriteRule    ^contact/?$    ?p=contact    [NC,L]

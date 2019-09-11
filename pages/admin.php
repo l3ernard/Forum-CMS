@@ -7,7 +7,7 @@
             <ul>
             <li><a href="<?php echo$root; ?>admin">Overview</a></li>
             <li><a href="<?php echo$root; ?>admin/adduser">Add user</a></li>
-            <li><a href="#">Customize style</a></li>
+            <li><a href="<?php echo$root; ?>#">Customize style</a></li>
             </ul>
         </div>
     </div>

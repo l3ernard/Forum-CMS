@@ -21,8 +21,8 @@ if(!isset($_POST['submit'])) {
     $password = $_POST['password'];
     $email = $_POST['email'];
 
-    $add_user = new Adduser();
-    $add_user->insert_user($username, $password, $email);
+    $userManager = new UserManager();
+    $userManager->insert_user($username, $password, $email);
 }
 
 

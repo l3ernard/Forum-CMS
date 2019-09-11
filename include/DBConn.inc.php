@@ -7,7 +7,7 @@ class DBConn{
 
 
     protected function connect(){
-        $this->db_servername = "localhost";
+        $this->db_servername = "localhost"; // 
         $this->db_username = "root";
         $this->db_password = "";
         $this->db_name = "forum-cms";
@@ -18,9 +18,9 @@ class DBConn{
     }
 }
 
-class AddUser extends DBConn{
+class UserManager extends DBConn{
 
-    public function insert_user($username, $password,$email){
+    public function insert_user($username, $password, $email){
         if(!$username || !$password || !$email){
 
             exit('Bad input');
@@ -31,8 +31,36 @@ class AddUser extends DBConn{
 
         $sql = "INSERT INTO users(username, password, email) values ('$this->username', '$this->password', '$this->password')";
         $result = $this->connect()->query($sql);
-
+        echo'Added user succesfully.';
     }
 
 
+    public function user_login($login_user, $login_pass)
+    {
+        $clean_user = filter_var($login_user, FILTER_SANITIZE_STRING);
+        $clean_pass = filter_var($login_pass, FILTER_SANITIZE_STRING);
+
+        $query = "SELECT * FROM users WHERE username='$clean_user' AND password='$clean_pass'";
+        $login_result = $this->connect()->query($query);
+        $user_data = $login_result->fetch_array();
+        $count_row = $login_result->num_rows;
+        if($count_row == 1)
+        {
+            $_SESSION['login'] = true;
+            $_SESSION['id'] = $user_data['id'];
+            echo 'Welcome ' . $user_data['username'] . '!';
+            return true;
+        }
+        else{
+            echo'Something went wrong :(';
+        }
+
+    }
+
+    public function user_logout(){
+        $_SESSION['login'] = false;
+        session_destroy();
+    }
+
 }
+
