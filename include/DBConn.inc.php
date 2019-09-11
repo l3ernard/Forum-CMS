@@ -29,7 +29,7 @@ class UserManager extends DBConn{
         $this->password = $password;
         $this->email = $email;
 
-        $sql = "INSERT INTO users(username, password, email) values ('$this->username', '$this->password', '$this->password')";
+        $sql = "INSERT INTO users(username, password, email) values ('$this->username', '$this->password', '$this->email')";
         $result = $this->connect()->query($sql);
         echo'Added user succesfully.';
     }
@@ -37,6 +37,8 @@ class UserManager extends DBConn{
 
     public function user_login($login_user, $login_pass)  // login user with username and password (add email soon)
     {
+        $result = '';
+
         $clean_user = filter_var($login_user, FILTER_SANITIZE_STRING);
         $clean_pass = filter_var($login_pass, FILTER_SANITIZE_STRING);
 
@@ -48,13 +50,13 @@ class UserManager extends DBConn{
         {
             $_SESSION['login'] = true;
             $_SESSION['id'] = $user_data['id'];
-            echo 'Welcome ' . $user_data['username'] . '!';
-            return true;
+            $result = 'Login success.' . 'Welcome ' . $user_data['username'] . '!';
         }
         else{
-            echo'Something went wrong :(';
+            $result = 'Username or password incorrect!';
         }
 
+        return $result;
     }
 
     public function user_info(){  // retrieve logged in user information(name, mail, level) with this function

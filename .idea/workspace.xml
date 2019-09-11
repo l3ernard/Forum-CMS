@@ -20,12 +20,14 @@
   <component name="ProjectId" id="1QbDn9Dni3F8djPfBUO5s8UikBR" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/git-cmd.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\3\Forum-CMS\pages\admin" />
       <recent name="C:\xampp\htdocs\3\Forum-CMS\include" />
       <recent name="C:\xampp\htdocs\3\Forum-CMS\css" />
       <recent name="C:\xampp\htdocs\3\Forum-CMS\pages" />
@@ -55,7 +57,7 @@
       <updated>1568030566946</updated>
       <workItem from="1568030568541" duration="4787000" />
       <workItem from="1568108745484" duration="10779000" />
-      <workItem from="1568193350041" duration="11374000" />
+      <workItem from="1568193350041" duration="16056000" />
     </task>
     <servers />
   </component>
@@ -74,5 +76,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/pages/admin/edituser.php</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

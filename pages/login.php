@@ -25,8 +25,8 @@ if(!$_SESSION) {
         <?php
     } else {
         $userManager = new UserManager();
-        $userManager->user_login($_POST['username'], $_POST['password']);
-
+        $login = $userManager->user_login($_POST['username'], $_POST['password']);
+        echo $login;
 
     }
 

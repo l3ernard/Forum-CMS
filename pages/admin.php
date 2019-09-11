@@ -3,6 +3,7 @@ if(!isset($_SESSION['login'])){
 
 
 } else {
+    include'include/admin.inc.php';
 
     $userManager = new UserManager();
     $cur_info = $userManager->user_info();
@@ -15,7 +16,6 @@ if(!isset($_SESSION['login'])){
 
     } else {
 
-
         ?>
 
         <div id="admin-panel">
@@ -26,7 +26,7 @@ if(!isset($_SESSION['login'])){
                 <div id="admin-menu">
                     <ul>
                         <li><a href="<?php echo $root; ?>admin">Overview</a></li>
-                        <li><a href="<?php echo $root; ?>admin/adduser">Add user</a></li>
+                        <li><a href="<?php echo $root; ?>admin/edituser">Edit User</a></li>
                         <li><a href="<?php echo $root; ?>#">Customize style</a></li>
                     </ul>
                 </div>
