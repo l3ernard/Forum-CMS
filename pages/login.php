@@ -33,6 +33,9 @@ if(!$_SESSION) {
 } else {
     echo'already logged in';
 
+    $userManager = new UserManager();
+    $current_user = $userManager->user_info();
+    echo $current_user['username'];
 }
 
 

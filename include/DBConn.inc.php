@@ -7,7 +7,7 @@ class DBConn{
 
 
     protected function connect(){
-        $this->db_servername = "localhost"; // 
+        $this->db_servername = "localhost"; //
         $this->db_username = "root";
         $this->db_password = "";
         $this->db_name = "forum-cms";
@@ -55,6 +55,25 @@ class UserManager extends DBConn{
             echo'Something went wrong :(';
         }
 
+    }
+
+    public function user_info(){
+        $_username = '';
+        $_email = '';
+        $_level = '';
+
+        if($_SESSION['login']){
+            $id = $_SESSION['id'];
+            $query = "SELECT * FROM users WHERE id='$id'";
+            $info_result = $this->connect()->query($query);
+            $user_info = $info_result->fetch_array();
+
+            $_username = $user_info['username'];
+            $_email = $user_info['email'];
+            $_level = $user_info['level'];
+        }
+
+        return array("username"=>$_username, "email"=>$_email, "level"=>$_level);
     }
 
     public function user_logout(){

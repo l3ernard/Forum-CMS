@@ -23,6 +23,9 @@ if(!isset($_POST['submit'])) {
 
     $userManager = new UserManager();
     $userManager->insert_user($username, $password, $email);
+
+
+
 }
 
 
