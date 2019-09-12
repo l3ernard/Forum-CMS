@@ -17,6 +17,9 @@ if(!$_SESSION) {
                                max="64"></td>
                 </tr>
                 <tr>
+                    <td><input type="checkbox" name="remember"  class="checkbox"> Remember</td>
+                </tr>
+                <tr>
                     <td><input type="submit" name="submit" value="Submit" class="formButton"></td>
                 </tr>
 
@@ -25,7 +28,7 @@ if(!$_SESSION) {
         <?php
     } else {
         $userManager = new UserManager();
-        $login = $userManager->user_login($_POST['username'], $_POST['password']);
+        $login = $userManager->user_login($_POST['username'], $_POST['password'], $_POST['remember']);
         echo $login;
 
     }

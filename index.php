@@ -1,7 +1,5 @@
 <?php
 include 'include/cfg.inc.php';
-include 'include/DBConn.inc.php';
-
 
 
 
@@ -38,7 +36,6 @@ include 'include/DBConn.inc.php';
             <main>
 
                 <?php
-
 
                 if(!isset($_GET['p'])){
                     include('pages/home.php');
