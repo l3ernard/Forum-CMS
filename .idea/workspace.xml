@@ -59,7 +59,8 @@
       <workItem from="1568108745484" duration="10779000" />
       <workItem from="1568193350041" duration="16113000" />
       <workItem from="1568278213982" duration="594000" />
-      <workItem from="1568282394143" duration="7692000" />
+      <workItem from="1568282394143" duration="8429000" />
+      <workItem from="1568627367927" duration="9389000" />
     </task>
     <servers />
   </component>
@@ -78,16 +79,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/pages/admin/edituser.php</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -4,4 +4,5 @@ session_start();
 
 include 'include/DBConn.inc.php';
 include 'include/user.inc.php';
+include 'include/content.inc.php';
 

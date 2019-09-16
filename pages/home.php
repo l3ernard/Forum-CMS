@@ -1,3 +1,15 @@
+<?php
+    $getcontent = new UserContent();
+
+    $newsposts = $getcontent->ShowNews();
+
+foreach ($newsposts as $news) {
+    echo '<article><h1>'.$news['title'].'</h1><p>' .$news['content'] .'</p><p class="newsinfo">' . $news['author'] . ' -  '.date("Y-m-d h:i:sa", $news['date']).'</p><p class="tags">'. $news['tags'] .'</p></article>';
+
+}
+
+?>
+
 <article>
     <h1>PlaceHolder Article</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

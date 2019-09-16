@@ -5,30 +5,30 @@
 }
 
 html,body{
-	width: 100%;
-	height: 100%;
-}
+     min-height: 100%;
+     height: 100%;
+ }
 
 
 body{
-	background-color:#ccc;
+	background-color: #333;
 
 }
 
 #wrap{
 	margin:auto;
 	width:80%;
-	background-color:#eee;
-	min-height:100%;
+	background-color: rgb(204, 204, 204);
+    min-height: 100% ;
+
 }
 
 #grid-container{
-	height:100%;
 	display:grid;
 	grid-template-areas:'header'
 						'main'
 						'footer';
-	grid-template-rows: auto 1fr auto;
+	grid-template-rows: 10vh minmax(80vh, auto) 5vh;
 	grid-template-columns: 100%;
 	grid-gap:2px;
 
@@ -120,7 +120,7 @@ footer{
 
 #page-content{
     grid-area:content;
-
+    padding:1rem;
 }
 
 #admin-panel tr td{
@@ -157,6 +157,18 @@ footer{
     min-width:300px;
     box-shadow:1px 1px 0px rgba(0,0,0,0.1);
 }
+
+.textarea{
+    height:300px;
+    width:300px;
+    padding:3px;
+    border-radius:2px;
+    border:none;
+    max-width:800px;
+    min-width:300px;
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+}
+
 
 .formButton{
     padding:6px;
