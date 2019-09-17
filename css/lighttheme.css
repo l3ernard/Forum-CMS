@@ -1,0 +1,187 @@
+*{
+	padding:0;
+	margin:0;
+	font-family: Helvetica;
+}
+
+html,body{
+     min-height: 100%;
+     height: 100%;
+ }
+
+
+body{
+	background-color:#e6e6e6 ;
+
+}
+
+#wrap{
+	margin:auto;
+	width:80%;
+	background-color: rgb(233, 233, 233);
+    min-height: 100% ;
+
+}
+
+#grid-container{
+	display:grid;
+	grid-template-areas:'header'
+						'main'
+						'footer';
+	grid-template-rows: 10vh minmax(80vh, auto) 5vh;
+	grid-template-columns: 100%;
+	grid-gap:2px;
+
+}
+
+
+article{
+	padding:1rem;
+}
+
+article p{
+	padding:1rem;
+
+}
+
+header{
+	grid-area:header;
+	padding:1rem;
+	display:grid;
+	grid-template-areas:'logo menu';
+	grid-template-columns: 80% 20%;
+	grid-template-rows: auto;
+}
+
+#logo{
+	grid-area:logo;
+}
+
+#logo h1{
+    font-weight:normal;
+
+}
+
+#menu{
+	grid-area:menu;
+}
+
+#menu ul li{
+	list-style:none;
+	display:inline;
+}
+
+#menu ul li a{
+	text-decoration:none;
+	color:#333;
+}
+
+main{
+	grid-area:main;
+	padding:1rem;
+}
+
+footer{
+	grid-area:footer;
+	padding:1rem;
+
+}
+
+
+
+#admin-panel h1{
+    font-size: 16pt;
+    font-weight:normal;
+    line-height:30px;
+}
+
+#admin-panel{
+    display:grid;
+    grid-template-areas:'page-header'
+                        'content';
+
+    background-color: #eee;
+}
+
+#admin-menu{
+    height:100%;
+
+}
+
+
+#page-header{
+    grid-area:page-header;
+    padding:0.5rem;
+    background-color: #dcdcdc;
+    display:grid;
+    grid-template-rows:auto;
+    grid-template-columns: 60% 40%;
+}
+
+#page-content{
+    grid-area:content;
+    padding:1rem;
+}
+
+#admin-panel tr td{
+    padding:0.2rem;
+
+}
+
+#admin-menu ul li{
+    list-style:none;
+    display:inline;
+
+}
+
+#admin-menu li{
+    padding:1rem;
+    line-height:30px;
+
+}
+
+#admin-menu ul li a{
+
+    color:black;
+    text-decoration:none;
+
+}
+
+.inputfields{
+    height:30px;
+    width:300px;
+    padding:3px;
+    border-radius:2px;
+    border:none;
+    max-width:100%;
+    min-width:300px;
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+}
+
+.textarea{
+    height:300px;
+    width:300px;
+    padding:3px;
+    border-radius:2px;
+    border:none;
+    max-width:800px;
+    min-width:300px;
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+}
+
+
+.formButton{
+    padding:6px;
+    border-radius:2px;
+    border:none;
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+    background-color:#fff;
+    width:60px;
+    font-weight:bold;
+    height:30px;
+}
+
+.formButton:hover{
+    text-shadow:0px 0px 3px rgba(0,0,0,0.1);
+    cursor:pointer;
+}

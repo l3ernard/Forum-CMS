@@ -29,7 +29,7 @@ if(!isset($_SESSION['login'])){
                         <li><a href="<?php echo $root; ?>admin">Overview</a></li>
                         <li><a href="<?php echo $root; ?>admin/news">Post News</a></li>
                         <li><a href="<?php echo $root; ?>admin/edituser">Edit User</a></li>
-                        <li><a href="<?php echo $root; ?>#">Customize style</a></li>
+                        <li><a href="<?php echo $root; ?>admin/style">Customize style</a></li>
                     </ul>
                 </div>
             </div>

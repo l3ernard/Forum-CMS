@@ -20,16 +20,16 @@
   <component name="ProjectId" id="1QbDn9Dni3F8djPfBUO5s8UikBR" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\3\Forum-CMS\css" />
       <recent name="C:\xampp\htdocs\3\Forum-CMS\pages\admin" />
       <recent name="C:\xampp\htdocs\3\Forum-CMS\include" />
-      <recent name="C:\xampp\htdocs\3\Forum-CMS\css" />
       <recent name="C:\xampp\htdocs\3\Forum-CMS\pages" />
     </key>
   </component>
@@ -61,6 +61,7 @@
       <workItem from="1568278213982" duration="594000" />
       <workItem from="1568282394143" duration="8429000" />
       <workItem from="1568627367927" duration="9389000" />
+      <workItem from="1568714667584" duration="7721000" />
     </task>
     <servers />
   </component>
