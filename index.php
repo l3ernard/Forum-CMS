@@ -11,7 +11,7 @@ include 'include/cfg.inc.php';
 	<meta name="description" content="Dingen">
  	<meta name="author" content="Bernard">
     <script src="<?php echo$root; ?>js/jquery-3.4.1.min.js"></script>
-  	<link rel="stylesheet" href="<?php echo$root; ?>css/style.css?v=1.0">
+  	<link rel="stylesheet" href="<?php echo$root . 'css/' . $style . '.css?v=1.0';?>">
 </head>
 
 <body>

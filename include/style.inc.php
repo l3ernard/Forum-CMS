@@ -14,6 +14,7 @@ class styleManager extends DBConn{
     public function setStyle($newStyle){
         $query = "UPDATE configuration SET style='$newStyle'";
         $result = $this->connect()->query($query);
+        echo'uh';
     }
 
     public function getStyle(){

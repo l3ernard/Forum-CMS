@@ -1,5 +1,4 @@
 <?php
-include('include/style.inc.php');
 
 $styleM = new styleManager();
 $styles = $styleM->getStyles();
@@ -8,8 +7,7 @@ $styles = $styleM->getStyles();
 
 
 
-if(!isset($_POST)) {
-
+if(!isset($_POST['submit'])) {
 
     ?>
 
@@ -19,12 +17,12 @@ if(!isset($_POST)) {
                 <td>Themes</td>
             </tr>
             <tr>
-                <td><select class="inputfields">
+                <td><select name="style" class="inputfields">
                         <?php
 
 
                         foreach ($styles as $style) {
-                            echo '<option value="' . $style['id'] . '">' . $style['name'] . '</option>';
+                            echo '<option value="' . $style['name'] . '">' . $style['name'] . '</option>';
 
                         }
                         ?>
@@ -34,11 +32,13 @@ if(!isset($_POST)) {
 
         </table>
 
-        <input type="submit" value="Save" class="formButton">
+        <input type="submit" name="submit" value="Save" class="formButton">
     </form>
     <?php
 
 } else {
+    $style = $_POST['style'];
 
-///////finishthis when u feel like it
+
+    $styleM->setStyle($style);
 }
