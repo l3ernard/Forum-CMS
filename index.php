@@ -1,8 +1,6 @@
 <?php
 include 'include/cfg.inc.php';
 
-
-
 ?>
 <html>
 	<head>

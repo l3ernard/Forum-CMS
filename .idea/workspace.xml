@@ -20,7 +20,7 @@
   <component name="ProjectId" id="1QbDn9Dni3F8djPfBUO5s8UikBR" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
@@ -63,6 +63,7 @@
       <workItem from="1568627367927" duration="9389000" />
       <workItem from="1568714667584" duration="7812000" />
       <workItem from="1568807113823" duration="3199000" />
+      <workItem from="1569238801200" duration="1700000" />
     </task>
     <servers />
   </component>
