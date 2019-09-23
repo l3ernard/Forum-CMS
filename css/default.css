@@ -87,6 +87,13 @@ footer{
 
 }
 
+#simpleGrid{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+}
+
 
 
 #admin-panel h1{
@@ -176,7 +183,7 @@ footer{
     border:none;
     box-shadow:1px 1px 0px rgba(0,0,0,0.1);
     background-color:#fff;
-    width:60px;
+    min-width:60px;
     font-weight:bold;
     height:30px;
 }

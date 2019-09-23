@@ -1,4 +1,5 @@
 RewriteEngine On    # Turn on the rewriting engine
+
 RewriteRule    ^home/?$    ?p=home    [NC,L]
 RewriteRule    ^login/?$    ?p=login    [NC,L]
 RewriteRule    ^logout/?$    ?p=logout    [NC,L]
@@ -13,7 +14,8 @@ RewriteRule    ^admin/?$    ?p=admin    [NC,L]
 RewriteRule    ^admin/adduser?$    ?p=admin&a=adduser    [NC,L]
 RewriteRule    ^admin/news?$    ?p=admin&a=news    [NC,L]
 RewriteRule    ^admin/style?$    ?p=admin&a=style    [NC,L]
+RewriteRule    ^admin/editstyle/(.*)$    ?p=admin&a=editstyle&style=$1    [QSA]
 
 
-ErrorDocument 404 http://localhost/3/forum-cms/404
-ErrorDocument 500 http://localhost/3/forum-cms/500
+ErrorDocument 404 http://localhost/forum-cms/404
+ErrorDocument 500 http://localhost/forum-cms/500

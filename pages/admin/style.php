@@ -1,4 +1,5 @@
-<?php
+<div id="simpleGrid">
+    <?php
 
 $styleM = new styleManager();
 $styles = $styleM->getStyles();
@@ -10,11 +11,10 @@ $styles = $styleM->getStyles();
 if(!isset($_POST['submit'])) {
 
     ?>
-
     <form action="" method="POST">
         <table>
             <tr>
-                <td>Themes</td>
+                <td>Choose Theme</td>
             </tr>
             <tr>
                 <td><select name="style" class="inputfields">
@@ -34,6 +34,8 @@ if(!isset($_POST['submit'])) {
 
         <input type="submit" name="submit" value="Save" class="formButton">
     </form>
+
+
     <?php
 
 } else {
@@ -42,3 +44,46 @@ if(!isset($_POST['submit'])) {
 
     $styleM->setStyle($style);
 }
+
+
+
+
+
+
+if(!isset($_POST['customize'])) {
+    ?>
+
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td>Customize Theme</td>
+            </tr>
+            <tr>
+                <td><select name="style" class="inputfields">
+                        <?php
+
+
+                        foreach ($styles as $style) {
+                            echo '<option value="' . $style['name'] . '">' . $style['name'] . '</option>';
+
+                        }
+                        ?>
+
+                    </select></td>
+            </tr>
+
+        </table>
+
+        <input type="submit" name="customize" value="Customize" class="formButton">
+    </form>
+</div>
+<?php
+} else {
+    $C_style = $_POST['style'];
+    header("Location: " . $root . "admin/editstyle/" . $C_style);
+
+}
+
+
+
+

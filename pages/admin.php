@@ -28,7 +28,6 @@ if(!isset($_SESSION['login'])){
                     <ul>
                         <li><a href="<?php echo $root; ?>admin">Overview</a></li>
                         <li><a href="<?php echo $root; ?>admin/news">Post News</a></li>
-                        <li><a href="<?php echo $root; ?>admin/edituser">Edit User</a></li>
                         <li><a href="<?php echo $root; ?>admin/style">Customize style</a></li>
                     </ul>
                 </div>
