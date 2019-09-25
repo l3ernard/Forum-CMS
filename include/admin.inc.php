@@ -14,21 +14,11 @@ class Administrator extends DBConn{
     }
 
     public function PostNews($title, $content, $tags, $author){
-        $this->title = $title;
-        $this->content = $content;
-        $this->tags = $tags;
-        $this->author = $author;
-        $this->date = time();
+        $date = time();
 
-        $query = "INSERT INTO news(`title`, `content`, `tags`, `author`, `date`) VALUES  ('$this->title', '$this->content', '$this->tags', '$this->author', '$this->date')";
+        $query = "INSERT INTO news(`title`, `content`, `tags`, `author`, `date`) VALUES  ('$title', '$content', '$tags', '$author', '$date')";
         $result = $this->connect()->query($query) or die();
-
-
-        if($result){
-            echo'xd???';
-
-        }
-        echo'xd?';
+        echo'nice';
     }
 
 }
