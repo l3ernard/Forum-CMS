@@ -4,7 +4,6 @@ RewriteRule    ^home/?$    ?p=home    [NC,L]
 RewriteRule    ^login/?$    ?p=login    [NC,L]
 RewriteRule    ^logout/?$    ?p=logout    [NC,L]
 RewriteRule    ^profile/?$    ?p=profile    [NC,L]
-RewriteRule    ^forum/?$    ?p=forum    [NC,L]
 RewriteRule    ^about/?$    ?p=about    [NC,L]
 RewriteRule    ^contact/?$    ?p=contact    [NC,L]
 RewriteRule    ^404/?$    ?p=404    [NC,L]
@@ -16,6 +15,13 @@ RewriteRule    ^admin/news?$    ?p=admin&a=news    [NC,L]
 RewriteRule    ^admin/style?$    ?p=admin&a=style    [NC,L]
 RewriteRule    ^admin/editstyle/(.*)$    ?p=admin&a=editstyle&style=$1    [QSA]
 
+
+# FORUM LINKS
+RewriteRule    ^forum/?$    ?p=forum    [NC,L]
+RewriteRule    ^forum/admin?$    ?p=forum&f=admin    [NC,L]
+RewriteRule    ^forum/overview?$    ?p=forum&f=overview    [NC,L]
+RewriteRule    ^forum/categorie/(\d+)?$     ?p=forum&f=categorie&id=$1    [QSA]
+RewriteRule    ^forum/thread/(\d+)?$    ?p=forum&f=thread&id=$1    [QSA]
 
 ErrorDocument 404 http://localhost/forum-cms/404
 ErrorDocument 500 http://localhost/forum-cms/500
