@@ -3,6 +3,17 @@ class ForumManager extends DBConn{
 
 
     //GETTING THINGS
+    public function getForums(){
+        $query = "SELECT * FROM forum";
+        $result = $this->connect()->query($query);
+        while($row = $result->fetch_assoc()){
+            $forum[] = $row;
+        }
+        return $forum;
+    }
+
+
+
     public function getCategories(){
         $query = "SELECT * FROM categorie";
         $result = $this->connect()->query($query);
@@ -33,28 +44,40 @@ class ForumManager extends DBConn{
 
 //all of this needs frontend stuff WORKing ON IT WIP
     //ADDING THING
-    public function AddCategorie($name, $tags){
+    public function AddCategorie($name, $tags, $parent_forum){
         $date = time();
 
-        $query = "INSERT INTO categorie(`name`, `tags`, `date`, `date`) VALUES  ('$name', '$tags', '$date')";
+        $query = "INSERT INTO categorie(`name`, `tags`, `creation_date`, `parent_forum`) VALUES  ('$name', '$tags', '$date', '$parent_forum')";
         $result = $this->connect()->query($query);
-        echo'nice';
+        echo'Added Categorie';
     }
 
-    public function AddForum(){
+    public function AddForum($name){
+        $date = time();
 
+        $query = "INSERT INTO forum(`name`, `creation_date`, `parent_forum`) VALUES  ('$name', '$date')";
+        $result = $this->connect()->query($query);
+        echo'Forum Created';
 
     }
 
 
-    public function PostThread($author, $title, $content, $tags){
+    public function PostThread($author, $title, $content, $tags, $parent_categorie){
+        $date = time();
 
+        $query = "INSERT INTO thread(`author`, `title`, `content`, `tags`, `parent_categorie`) VALUES  ('$author', '$date')";
+        $result = $this->connect()->query($query);
+        echo'Forum Created';
 
     }
 
 
     public function PostComment($author, $parent_thread, $content){
+        $date = time();
 
+        $query = "INSERT INTO posts(`author`, `title`, `content`, `tags`, `parent_categorie`) VALUES  ('$author', '$date')";
+        $result = $this->connect()->query($query);
+        echo'Forum Created';
 
     }
 
