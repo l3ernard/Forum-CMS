@@ -176,6 +176,17 @@ footer{
     box-shadow:1px 1px 0px rgba(0,0,0,0.1);
 }
 
+.textarea-comment{
+    height:200px;
+    width:100%;
+    padding:3px;
+    border-radius:2px;
+    border:none;
+    max-width:800px;
+    min-width:300px;
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+}
+
 
 .formButton{
     padding:6px;
@@ -203,6 +214,19 @@ footer{
     padding:1rem;
 
 }
+
+
+.forum-thread{
+    background-color: rgba(255,255,255,0.3);
+    padding:1rem;
+
+}
+
+.forum-post{
+    padding:1rem;
+    background-color: rgba(255,255,255,0.2);
+}
+
 
 .cat{
     background-color: #dcdcdc;

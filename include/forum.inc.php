@@ -23,8 +23,8 @@ class ForumManager extends DBConn{
         return $categories;
     }
 
-    public function getThreads($parent_categorie){
-        $query = "SELECT * FROM thread WHERE parent_categorie='$parent_categorie'";
+    public function getThreads($parent_cat){
+        $query = "SELECT * FROM thread WHERE parent_category='$parent_cat'";
         $result = $this->connect()->query($query);
         while($row = $result->fetch_assoc()){
             $threads[] = $row;
@@ -32,8 +32,19 @@ class ForumManager extends DBConn{
         return $threads;
     }
 
+    public function getThread($threadID){
+    $query = "SELECT * FROM thread WHERE id='$threadID'";
+    $result = $this->connect()->query($query);
+    while($row = $result->fetch_assoc()){
+        $thread[] = $row;
+    }
+
+
+        return $thread;
+    }
+
     public function getPosts($parent_thread){
-        $query = "SELECT * FROM post WHERE parent_thread='$parent_thread'";
+        $query = "SELECT * FROM posts WHERE parent_thread='$parent_thread'";
         $result = $this->connect()->query($query);
         while($row = $result->fetch_assoc()){
             $categories[] = $row;

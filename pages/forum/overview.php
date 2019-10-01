@@ -9,7 +9,7 @@ foreach($forums as $forum){
 
     echo '<tr class="cat"><td>' . $forum['name'] . '</td></tr>';
         foreach($categories as $category){
-            echo'<tr><td>' . $category['name'] .' </td></tr>';
+            echo'<tr><td><a href="' . $root . 'forum/categorie/' . $category['id'] . '">' . $category['name'] .'</a> </td></tr>';
 
         }
 }

@@ -24,10 +24,10 @@ include 'include/cfg.inc.php';
 
                 <div id="menu">
                     <ul>
-                        <li><a href="home">Home</a></li>
-                        <li><a href="contact">Contact</a></li>
-                        <li><a href="forum">Forum</a></li>
-                        <li><?php if($_SESSION){ echo'<a href="logout">Logout</a>';} else { echo'<a href="login">Login</a>';} ?></li>
+                        <li><a href="<?php echo$root; ?>home">Home</a></li>
+                        <li><a href="<?php echo$root; ?>contact">Contact</a></li>
+                        <li><a href="<?php echo$root; ?>forum">Forum</a></li>
+                        <li><?php if($_SESSION){ echo'<a href="logout">Logout</a>';} else { echo'<a href="' . $root . 'login">Login</a>';} ?></li>
                     </ul>
                 </div>
             </header>
