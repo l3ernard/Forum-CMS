@@ -20,6 +20,7 @@ RewriteRule    ^admin/editstyle/(.*)$    ?p=admin&a=editstyle&style=$1    [QSA]
 RewriteRule    ^forum/?$    ?p=forum    [NC,L]
 RewriteRule    ^forum/admin?$    ?p=forum&f=admin    [NC,L]
 RewriteRule    ^forum/overview?$    ?p=forum&f=overview    [NC,L]
+RewriteRule    ^forum/newthread/(\d+)?$    ?p=forum&f=newthread&c=$1    [QSA]
 RewriteRule    ^forum/categorie/(\d+)?$     ?p=forum&f=categorie&c=$1    [QSA]
 RewriteRule    ^forum/thread/(\d+)?$    ?p=forum&f=thread&t=$1    [QSA]
 

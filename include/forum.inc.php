@@ -44,17 +44,21 @@ class ForumManager extends DBConn{
     }
 
     public function getPosts($parent_thread){
+        $categories[] = null;
         $query = "SELECT * FROM posts WHERE parent_thread='$parent_thread'";
         $result = $this->connect()->query($query);
-        while($row = $result->fetch_assoc()){
-            $categories[] = $row;
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $categories[] = $row;
+            }
+        } else {
+
+
         }
         return $categories;
     }
 
 
-//all of this needs frontend stuff WORKing ON IT WIP
-    //ADDING THING
     public function AddCategorie($name, $tags, $parent_forum){
         $date = time();
 
@@ -73,12 +77,12 @@ class ForumManager extends DBConn{
     }
 
 
-    public function PostThread($author, $title, $content, $tags, $parent_categorie){
+    public function PostThread($author, $title, $content, $tags, $parent_category){
         $date = time();
 
-        $query = "INSERT INTO thread(`author`, `title`, `content`, `tags`, `parent_categorie`) VALUES  ('$author', '$date')";
+        $query = "INSERT INTO thread(`author`, `title`, `content`, `tags`, `parent_category`, `creation_date`) VALUES  ('$author', '$title', '$content', '$tags', '$parent_category', '$date')";
         $result = $this->connect()->query($query);
-        echo'Forum Created';
+        echo'Thread Created';
 
     }
 
@@ -86,7 +90,7 @@ class ForumManager extends DBConn{
     public function PostComment($author, $parent_thread, $content){
         $date = time();
 
-        $query = "INSERT INTO posts(`author`, `title`, `content`, `tags`, `parent_categorie`) VALUES  ('$author', '$date')";
+        $query = "INSERT INTO posts(`author`, `content`, `parent_thread`, `creation_date`) VALUES  ('$author', '$content', '$parent_thread', '$date')";
         $result = $this->connect()->query($query);
         echo'Forum Created';
 

@@ -27,7 +27,8 @@ if(!isset($_SESSION['login'])){
 
             </div>
             <div id="admincontent">
-                <table >                    <tr><td>Categories</td></tr>
+                <table >
+                    <tr><td>Categories</td><td>Edit</td><td>Delete</td></tr>
 
                 </table>
 
