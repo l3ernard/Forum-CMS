@@ -24,5 +24,9 @@ RewriteRule    ^forum/newthread/(\d+)?$    ?p=forum&f=newthread&c=$1    [QSA]
 RewriteRule    ^forum/categorie/(\d+)?$     ?p=forum&f=categorie&c=$1    [QSA]
 RewriteRule    ^forum/thread/(\d+)?$    ?p=forum&f=thread&t=$1    [QSA]
 
+# FORUM ADMIN PANEL
+RewriteRule    ^forum/admin/?$    ?p=forum&f=admin&fa=home    [NC,L]
+RewriteRule    ^forum/admin/?$    ?p=forum&f=admin&fa=home    [NC,L]
+
 ErrorDocument 404 http://localhost/forum-cms/404
 ErrorDocument 500 http://localhost/forum-cms/500

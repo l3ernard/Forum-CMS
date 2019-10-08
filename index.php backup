@@ -15,33 +15,22 @@ include 'include/cfg.inc.php';
 <body>
 	<div id="wrap">
         <div id="grid-container">
-            <div id="sidebar">
+            <header>
                 <div id="logo">
                     <h1>Forum - CMS</h1>
                     <sub>wtf sick subtitle</sub>
                 </div>
 
 
-                <div id="menu" class="menu">
+                <div id="menu">
                     <ul>
                         <li><a href="<?php echo$root; ?>home">Home</a></li>
                         <li><a href="<?php echo$root; ?>contact">Contact</a></li>
                         <li><a href="<?php echo$root; ?>forum">Forum</a></li>
-                    </ul>
-                </div>
-                <div id="pagemenu" class="menu">
-                    <ul>
-                        <li>watjefak</li>
-
-                    </ul>
-
-                </div>
-                <div id="usermenu" class="menu">
-                    <ul>
                         <li><?php if($_SESSION){ echo'<a href="logout">Logout</a>';} else { echo'<a href="' . $root . 'login">Login</a>';} ?></li>
                     </ul>
                 </div>
-            </div>
+            </header>
             <main>
 
                 <?php
@@ -59,6 +48,9 @@ include 'include/cfg.inc.php';
                 }
                 ?>
             </main>
+            <footer>
+                Bernard Stornebrink 2019
+            </footer>
 		</div>
 
 	</div>

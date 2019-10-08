@@ -22,15 +22,24 @@ if(!isset($_SESSION['login'])){
         <div id="admin-panel">
             <div id="page-header">
                 <div id="page-title">
-                    <h1>Admin Panel</h1>
+                    <h1>Dashboard</h1>
                 </div>
 
             </div>
             <div id="admincontent">
-                <table >
-                    <tr><td>Categories</td><td>Edit</td><td>Delete</td></tr>
+                <?php
+                if (!isset($_GET['fa'])) {
+                    include('admin/home.php');
+                } else {
 
-                </table>
+                    if (!file_exists("pages/forum/admin/" . $_GET['fa'] . ".php")) {
+                        header("Location: admin/forum/home");
+                    } else {
+                        include("pages/forum/admin/" . $_GET['fa'] . ".php");
+                    }
+
+                }
+                ?>
 
             </div>
         </div>
