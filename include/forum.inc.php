@@ -92,7 +92,7 @@ class ForumManager extends DBConn{
 
         $query = "INSERT INTO posts(`author`, `content`, `parent_thread`, `creation_date`) VALUES  ('$author', '$content', '$parent_thread', '$date')";
         $result = $this->connect()->query($query);
-        echo'Forum Created';
+        echo'Comment Created';
 
     }
 
@@ -122,6 +122,21 @@ class ForumManager extends DBConn{
 
     public function DeletePost($postID, $reason){
 
+
+    }
+
+    //
+
+    public function getLatestThreads($count)
+    {
+        $query = "SELECT * FROM thread ORDER BY id DESC limit $count";
+        $result = $this->connect()->query($query);
+        while($row = $result->fetch_assoc()){
+            $thread[] = $row;
+        }
+
+
+        return $thread;
 
     }
 

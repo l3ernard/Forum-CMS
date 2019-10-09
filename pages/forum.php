@@ -1,7 +1,4 @@
 <?php
-include'include/forum.inc.php';
-
-
 if (!isset($_GET['f'])) {
     include('forum/overview.php');
 } else {

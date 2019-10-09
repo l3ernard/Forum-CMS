@@ -30,6 +30,7 @@ body{
     grid-template-rows: 100%;
     grid-template-columns: 200px auto auto;
     box-shadow: 0px 0px 4px #010101;
+    background-color:#010101;
     border-radius:2px;
     min-height:100%;
 }
@@ -37,15 +38,12 @@ body{
 #sidebar{
     display:grid;
     grid-template-areas:'logo'
+                        'usermenu'
                         'menu'
-                        'pagemenu'
-                        'usermenu';
-    grid-template-rows: minmax(50px, 10%) minmax(100px, 20%) minmax(100px, 50%)  minmax(100px, 20%);
+                        'pagemenu';
+    grid-template-rows: 50px 50px 100px  auto;
     grid-area:sidebar;
-    background-color:#777;
-    border-radius:2px 0px 0px 2px;
-    border-right:1px solid #888;
-    padding:.5rem;
+
 
 }
 
@@ -63,12 +61,19 @@ body{
 
 #logo{
     grid-area:logo;
-
+    background-color:#777;
+    border-radius:2px 0px 0px 2px;
+    border-right:1px solid #888;
+    padding:.5rem;
 }
 
 #menu{
+    margin-top:5px;
     grid-area:menu;
-
+    background-color:#777;
+    border-radius:2px 0px 0px 2px;
+    border-right:1px solid #888;
+    padding:.5rem;
 }
 
 .menu ul li{
@@ -86,6 +91,23 @@ body{
 .menu ul li a:hover{
 
     text-shadow:1px 1px 0px rgba(200,200,200,1);
+}
+
+#usermenu{
+    margin-top:5px;
+    background-color:#777;
+    border-radius:2px 0px 0px 2px;
+    border-right:1px solid #888;
+    padding:.5rem;
+}
+
+#pagemenu{
+    margin-top:5px;
+    background-color:#777;
+    border-radius:2px 0px 0px 2px;
+    border-right:1px solid #888;
+    padding:.5rem;
+
 }
 
 main{

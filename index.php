@@ -20,7 +20,11 @@ include 'include/cfg.inc.php';
                     <h1>Forum - CMS</h1>
                     <sub>wtf sick subtitle</sub>
                 </div>
-
+                <div id="usermenu" class="menu">
+                    <ul>
+                        <li><?php if($_SESSION){ echo'<a href="logout">Logout</a>';} else { echo'<a href="' . $root . 'login">Login</a>';} ?></li>
+                    </ul>
+                </div>
 
                 <div id="menu" class="menu">
                     <ul>
@@ -31,16 +35,32 @@ include 'include/cfg.inc.php';
                 </div>
                 <div id="pagemenu" class="menu">
                     <ul>
-                        <li>watjefak</li>
+                        <li>Latest Threads</li>
+                    <?php
+
+                        $getNewThreads = $fManager->getLatestThreads(10);
+                        foreach($getNewThreads as $thread){
+                            echo'<li><a href="forum/thread/' . $thread['id'] . '">' . $thread['title'] . '</a></li>';
+
+                        }
+
+                    ?>
 
                     </ul>
-
-                </div>
-                <div id="usermenu" class="menu">
                     <ul>
-                        <li><?php if($_SESSION){ echo'<a href="logout">Logout</a>';} else { echo'<a href="' . $root . 'login">Login</a>';} ?></li>
+                        <li>Active Threads</li>
+                        <?php
+
+                        $getNewThreads = $fManager->getLatestThreads(10);
+                        foreach($getNewThreads as $thread){
+                            echo'<li><a href="forum/thread/' . $thread['id'] . '">' . $thread['title'] . '</a></li>';
+
+                        }
+
+                        ?>
                     </ul>
                 </div>
+
             </div>
             <main>
 
